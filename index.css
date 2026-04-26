@@ -54,22 +54,38 @@ input::placeholder {
   -webkit-text-fill-color: transparent;
 }
 
+ul {
+  transition: 0.3s ease;
+  min-width: 80%;
+  padding: 10px 20px;
+}
+
+li {
+  font-size: 0.7rem;
+  margin-left: -90px;
+  cursor: pointer;
+  margin-top: 7px;
+}
+
+li:hover:after {
+  content: "( ✓ )";
+  color: rgb(111, 255, 0);
+  margin-left: 5px;
+}
+
 li::before {
   content: "★ ";
   color: orange;
 }
 
-li {
-  font-size: 0.7rem;
-  margin-left: -80px;
-  cursor: pointer;
-}
-
-.clicked::before {
+li.clicked::before {
   content: "✓";
-  color: orange;
+  color: rgb(0, 255, 115);
+  margin-left: 2px;
+  margin-right: 5px;
 }
 
-.clicked::after {
+li.clicked:hover:after {
   color: rgb(225, 36, 36);
+  content: "( X )";
 }
